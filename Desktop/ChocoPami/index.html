@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>@pamelahentz🍫</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Oswald&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+    </head>
+
+    <body> 
+        <header>
+            <div class="caixa">
+				<h1><img src="logo-v1.png" alt="Logo @pamelahentz"></h1>
+				<nav>
+					<ul>
+						<li><a href="index.html">Pedido</a></li>
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</nav>
+			</div>  
+        </header>
+
+        <div class="banner">
+            <img src="banner1.png" alt="Imagens dos chocolates @pamelahentz" width="100%">
+            <h2>Faça seu pedido!</h2>
+        </div>
+
+        <main>
+            <h3>Barras</h3>
+            <select id="barras" onchange="mostrarbRecheios()">
+                <option value="">Selecione a barra</option>
+                <option value="bMini">Mini Tablete (100g)</option>
+                <option value="bNuance">Tablete Nuance (200g)</option>
+                <option value="bGrande">Tablete Grande (250g)</option>
+            </select>
+              
+            <div id="bRecheios" style="display: none;">
+                <select id="bRecheiosSelecionados">
+                  <option value="">Selecione o recheio</option>
+                  <!-- Opções vazias para serem substituídas dinamicamente -->
+                </select>
+            </div>
+
+            <!-- ADICIONAR AQUI O SELECT DA QUANTIA -->
+
+            <div class="buttonAdd">
+                <button class="btAdd" type="submit">Adicionar!</button>
+            </div>
+
+            <script>
+                // Mapeamento de sub-opções para cada opção
+                var bRecheiosPorBarra = {
+                bMini: ["Branquinho", "Brigadeiro", "Mousse de maracujá", "Nozes"],
+                bNuance: ["Branquinho", "Brigadeiro", "Mousse de maracujá", "Nozes"],
+                bGrande: ["Branquinho", "Brigadeiro", "Mousse de maracujá", "Nozes"]
+                };
+
+                // Função para exibir as sub-opções correspondentes à opção selecionada
+                function mostrarbRecheios() {
+                var barraSelecionada = document.getElementById("barras").value;
+                var bRecheios = bRecheiosPorBarra[barraSelecionada];
+
+                var bRecheiosSelect = document.getElementById("bRecheiosSelecionados");
+                bRecheiosSelect.innerHTML = ""; // Limpa as opções existentes
+
+                if (bRecheios && bRecheios.length > 0) {
+                    for (var i = 0; i < bRecheios.length; i++) {
+                    var subOpcao = bRecheios[i];
+                    var option = document.createElement("option");
+                    option.text = subOpcao;
+                    bRecheiosSelect.add(option);
+                    }
+
+                    document.getElementById("bRecheios").style.display = "block";
+                } else {
+                    document.getElementById("bRecheios").style.display = "none";
+                }
+                }
+
+            </script>
+            <h3>Trufas</h3>
+                <select name="Trufas" id="trufas" onchange="mostrarSubOpcoes()">
+                    <option value="">Selecione a trufa</option>
+                    <option value="tLeite">Chocolate ao leite - cremoso</option>
+                    <option value="tLeiteA">Chocolate ao leite - aerado</option>
+                    <option value="tBranco">Chocolate branco - cremoso</option>
+                    <option value="tBrancoA">Chocolate branco - aerado</option>
+                </select>
+              
+                <div id="tRecheios" style="display: none;">
+                    <select id="tRecheiosSelecionados">
+                        <option value="">Selecione um recheio</option>
+                        <!-- Opções vazias para serem substituídas dinamicamente -->
+                    </select>
+                </div>
+
+            <!-- ADICIONAR AQUI O SELECT DA QUANTIA -->
+
+            <div class="buttonAdd">
+                <button class="btAdd" type="submit">Adicionar!</button>
+            </div>
+
+                <script>
+                    // Mapeamento de sub-opções para cada opção
+                    var tRecheiosPorTrufa = {
+                    tLeite: ["Sub-opção 1.1", "Sub-opção 1.2", "Sub-opção 1.3"],
+                    opcao2: ["Sub-opção 2.1", "Sub-opção 2.2"],
+                    opcao3: ["Sub-opção 3.1", "Sub-opção 3.2", "Sub-opção 3.3"]
+                    };
+
+                    // Função para exibir as sub-opções correspondentes à opção selecionada
+                    function mostrarSubOpcoes() {
+                    var trufasSelecionada = document.getElementById("trufas").value;
+                    var tRecheios = tRecheiosPorTrufa[trufasSelecionada];
+
+                    var tRecheiosSelect = document.getElementById("tRecheiosSelecionados");
+                    tRecheiosSelect.innerHTML = ""; // Limpa as opções existentes
+
+                    if (tRecheios && tRecheios.length > 0) {
+                        for (var i = 0; i < tRecheios.length; i++) {
+                        var subOpcao = tRecheios[i];
+                        var option = document.createElement("option");
+                        option.text = subOpcao;
+                        tRecheiosSelect.add(option);
+                        }
+
+                        document.getElementById("tRecheios").style.display = "block";
+                    } else {
+                        document.getElementById("tRecheios").style.display = "none";
+                    }
+                    }
+                </script>
+              
+
+
+            <h4>Seu Pedido:</h4>
+            <div class="confimar">
+                <button class="bt" type="submit">Confirmar!</button>
+                <button class="bt2" type="submit">Limpar</button>
+            </div>
+        </main>
+
+        <footer>
+            <img src="logo-v2.png" alt="Logo @pamelahentz">
+        </footer>
+    </body>
+</html>

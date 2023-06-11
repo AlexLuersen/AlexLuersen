@@ -1,0 +1,11 @@
+@pamelahentz
+>>exportar pedidos para planilhas
+>>lista de produtos/sabores
+>>contato
+
+IMAGENS P FAZER
+-logo;
+-banner;
+-bg(fundo ou rodapé?);
+-ícones(barra, trufa...)(sabores tbm?);~
+-ícone p/ barra do navegador!

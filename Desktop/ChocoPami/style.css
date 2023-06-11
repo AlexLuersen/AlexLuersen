@@ -1,0 +1,103 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	background: #754f5be3;
+}
+
+.caixa {
+	position: relative;
+	width: 1200px;
+    height: 75px;
+    margin: 0 auto;
+}
+
+nav {
+	position: absolute;
+	top: 25px;
+	right: 0;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+nav a {
+    font-family: 'Emilys Candy', cursive;
+	color: #3d1600;
+	font-size: 24px;
+	text-decoration: none;
+
+}
+
+.banner {
+	position: relative;
+	border: 0;
+}
+
+h2 {
+	position: absolute;
+	font-family: 'Emilys Candy', cursive;
+	font-size: 60px;
+	left: 475px;
+	top: 70px;
+	color: #FFCAD4;
+	-webkit-text-stroke: 1.5px;
+	-webkit-text-stroke-color: #3d1600;
+}
+
+h3 {
+	font-family: 'Emilys Candy', cursive;
+	font-size: 60px;
+	text-align: center;
+}
+
+h4 {
+	font-family: 'Emilys Candy', cursive;
+	font-size: 50px;
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+.confirmar {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.bt {
+	border: 0;
+	padding: 10px;
+	background-color: #3d1600;
+	font-family: 'Emilys Candy', cursive;
+	text-align: center;
+	font-size: 20px;
+	color: #99666f;
+	cursor: pointer;
+}
+
+.bt2 {
+	border: 0;
+	padding: 10px;
+	background-color: #c5c5c5;
+	font-family: 'Emilys Candy', cursive;
+	text-align: center;
+	font-size: 16px;
+	color: #99666f;
+	cursor: pointer;
+	display: inline-block;
+}
+
+footer {
+	text-align: center;
+	background: url("bg2.png");
+	padding: 20px 0;
+}
