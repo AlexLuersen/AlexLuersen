@@ -1,0 +1,11 @@
+# Configurações básicas
+title: Seu Título
+description: Descrição do seu site
+theme: jekyll-theme-primer
+
+# Configurações de URL
+url: https://www.exemplo.com.br
+baseurl: ""
+
+# Configurações de build
+markdown: kramdown
