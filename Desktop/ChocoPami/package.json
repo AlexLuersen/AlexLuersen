@@ -1,12 +1,23 @@
 {
   "name": "chocopami",
   "version": "1.0.0",
-  "description": "",
+  "description": "site pams",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Alex Luersen",
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexLuersen/AlexLuersen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlexLuersen/AlexLuersen/issues"
+  },
+  "homepage": "https://github.com/AlexLuersen/AlexLuersen#readme"
 }
